@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouseover Underline Specific Text</title>
+  <style>
+    .hover-word {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>
+    <span class="hover-word">Hi,</span> 
+    <span class="hover-word">How</span>  
+    <span class="hover-word">are</span>  
+    <span class="hover-word">you?</span> 
+  </h1>
+</body>
+</html>
+  <script>
+  
+    const words = document.querySelectorAll('.hover-word');
+
+    words.forEach(word => {
+      word.addEventListener('mouseover', () => {
+        word.style.textDecoration = 'underline';
+      });
+
+      word.addEventListener('mouseout', () => {
+        word.style.textDecoration = 'none';
+      });
+    });
+  </script>
